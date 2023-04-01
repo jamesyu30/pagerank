@@ -8,3 +8,16 @@ p {
     font-family: "Lucida Sans Typewriter";
     font-size: 18px;
 }
+
+body::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: lightgray;    /* color of the scroll thumb */
+  border-radius: 24px;       /* roundness of the scroll thumb */
+}

@@ -1,12 +1,20 @@
 .center {
-    margin:auto;
-    width: 65%;
-    text-align: center;
+  margin:auto;
+  width: 60%;
+  text-align: center;
 }
 
 p {
-    font-family: "Lucida Sans Typewriter";
-    font-size: 18px;
+  font-family: "Lucida Sans Typewriter";
+  font-size: 19px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h3{
+  font-size: 30px;
 }
 
 body::-webkit-scrollbar {

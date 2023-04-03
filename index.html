@@ -2,7 +2,7 @@
 <html>
     <head>
         <!-- This is For google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=PT+Mono&display=swap" rel="stylesheet">
 
@@ -24,7 +24,7 @@
                 They achieve this by using a sorting algorithm in order to find the most relavant and trustworthy sites. One of the factors to this
                 algorithm is a page's PAGERANK. The Pagerank of a site can be seen as a measure of how trustworthy that site is.
                 The Pagerank algorithm is used to assign numerical weights, or importance, to each webpage. This algorithm is used on any set
-                of webpages that are linked to one another through hyperlinks (citations). 
+                of webpages that are linked to one another through hyperlinks (citations).
             </p>
         </div>
 
@@ -40,7 +40,19 @@
                 </ul>
             <p>
                 Given The Algorithm:
-                <!-- PUT AN IMAGE HERE -->
+                <br>
+                        <img src="../static/equation.jpg" width="200" height="100">
+                <br>
+                The PageRank algorithm is an recursive algorithm that calculates the PageRank of a site from the set of backlinks, <i>v</i>, that point to that page. 
+                These backlinks are weighted based on the PageRank of the site that contains it, <i>R(v)</i>, divided by the number of forward links in that page. 
+                If the backlink comes from a particularly important site (with high PageRank), it will be weighted higher. 
+                The PageRank of a page is the sum of the PageRank of the backlinks. It is then mulitplied by <i>c</i> to make sure it adds up to 1. 
+                PageRank can be thought of intuitively with the random surfer model: it models the chances that a surfer would click on a link if they were randomly selecting links to click on. 
+                If a page has a PageRank of .4, then there is a 40% chance a web surfer will click on the page. We need <i>c</i> because we don't want the total PageRank exceeding 100%. To help you visualize the algorithm, we have the diagram below.
+                <br>
+                    <img src="../static/diagram.jpg" width="350" height="250">
+
+
             </p>
         </div>
 
@@ -49,18 +61,17 @@
 
             <p>
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta faucibus dui in rutrum. Aenean tortor dolor, porta id consectetur in, scelerisque non elit. Phasellus aliquam, nisi nec pellentesque rhoncus, sapien arcu vulputate lorem, ac placerat ipsum tortor nec nibh. Suspendisse efficitur consequat luctus. In tincidunt laoreet convallis. Nam pulvinar nibh sed ultricies vulputate. Praesent ultricies vehicula auctor. Donec nunc libero, ultrices at sagittis eget, tristique ac tellus. Nunc nulla elit, mollis in nisi sollicitudin, convallis rutrum erat. Curabitur tristique purus lorem, sit amet malesuada nunc luctus ac.
-
-Donec iaculis mauris vel turpis euismod accumsan. Donec auctor mi dolor, ut iaculis sapien volutpat eu. Nulla vel ex ex. Phasellus pellentesque in urna efficitur viverra. Nulla quis egestas enim. Nullam odio dui, sagittis vitae enim eu, facilisis iaculis dui. Mauris porttitor mattis risus ac dapibus. Nunc tellus justo, sodales sit amet est vel, ultrices varius lorem. Suspendisse varius, metus sit amet iaculis tempor, sapien velit rutrum odio, sed venenatis leo eros nec sapien. Duis at nunc ultricies, elementum massa non, accumsan magna. Nullam quis consequat ligula, nec lacinia tortor. Nulla facilisi. Fusce vitae mi tempus, cursus urna eu, efficitur ex. Sed ac tellus et augue posuere dapibus. Aenean iaculis sodales tristique.
-
-Pellentesque et dui et mi tempor aliquam eu in nunc. Pellentesque in libero porttitor, placerat risus ut, blandit enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget felis nec elit venenatis feugiat et nec erat. Sed efficitur, nisi interdum euismod suscipit, elit erat blandit ligula, at aliquam quam odio vel felis. Quisque quis placerat sem. Proin interdum nibh lacus, eu tristique lacus feugiat et. Vivamus fermentum aliquam leo, ut ornare tellus euismod iaculis. Vivamus in nisi in nisl finibus ultricies eget ut quam. Etiam feugiat, augue vel blandit ornare, dui sapien vulputate est, eget pulvinar enim augue ut est. Morbi id sem accumsan, scelerisque nunc id, suscipit felis. Nam ac luctus diam, eget congue augue. Phasellus eros augue, auctor congue lacinia at, suscipit a elit.
-
-Fusce semper facilisis libero, ut iaculis augue sagittis at. Duis et consectetur lorem. Donec mattis lectus nec orci hendrerit dignissim. Suspendisse iaculis libero et felis egestas, ut pretium mi posuere. Mauris maximus libero ante, at pellentesque urna faucibus eu. Vivamus a risus posuere, gravida ex in, blandit felis. Etiam efficitur justo erat, a commodo nulla lacinia vitae. Maecenas elit libero, ornare ac molestie eget, maximus in nunc. Integer sem leo, bibendum non sem ac, facilisis interdum orci. Integer condimentum eget nulla in porttitor. Nullam ornare porta ex, a dapibus urna tristique nec. Etiam malesuada neque rhoncus, suscipit magna ac, laoreet ligula. Sed finibus felis non sodales molestie. Cras et purus in risus posuere placerat ac convallis ligula. Donec at augue et nibh feugiat varius. Cras mollis sit amet eros at lacinia.
-
-In hac habitasse platea dictumst. Vivamus vitae velit tortor. Phasellus cursus justo a dui tristique laoreet. Suspendisse potenti. Vivamus id ligula vel lacus gravida sollicitudin et laoreet tortor. Praesent pretium pharetra augue, at blandit arcu mattis vitae. Quisque bibendum, ante id malesuada laoreet, lacus turpis gravida est, nec bibendum massa dui eget nulla. Mauris ac ex eu ipsum rhoncus condimentum id id tellus. Sed at erat quis diam euismod faucibus. Quisque condimentum rhoncus tellus. Morbi ac convallis justo.
-            </p>
-        </div>
+                There are some problems with this model. One of them being dangling links. Dangling links are links that lead to a webpage without any forward links. 
+                This creates a problem because with each iteration as you calculate the PageRank score, the score decreases. 
+                This makes pages that might be important less important because it has a lower score. 
+                To fix this, PageRank simply removes all of the websites without any forward links because they don’t affect the PageRank score and puts them back in after all of the other websites are scored.
+<br>
+<br>
+                Another problem with this model is rank sinks. If we have web pages linking to each other, forming a loop, and a web page that links to one of the web pages in the loop, then we will have created a rank sink. 
+                This is problematic because it will inflate the PageRank of the websites. To prevent this from happening, the algorithm will be modified to simulate a 15% chance of going to a random website. 
+                This creates an artificial link to every website and disrupts the loop. This mimics the behavior of a random surfer getting bored then going to a new website. An example of a rank sink can be found below:
+<br>
+<img src="../static/ranksink.jpg" height="225" width="360">
 
         <div class="conclusion">
             <h3>Conclusion</h3>

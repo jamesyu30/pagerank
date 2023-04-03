@@ -1,12 +1,24 @@
 .center {
   margin:auto;
   width: 60%;
-  text-align: center;
+  text-align: justify;
 }
 
 p {
-  font-family: "Lucida Sans Typewriter";
-  font-size: 19px;
+  font-family: "Inter";
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.model {
+  margin-top: 100px;
+}
+
+ul{
+  text-align: left;
+  list-style-type: square;
+  font-size: 20px;
+  font-family: "PT Mono";
 }
 
 h1 {
@@ -15,6 +27,7 @@ h1 {
 
 h3{
   font-size: 30px;
+  text-align: left;
 }
 
 body::-webkit-scrollbar {

@@ -6,9 +6,10 @@
 
 p {
   font-family: "Inter";
-  padding-top: 27px;
+  padding-top: 20px;
   font-size: 20px;
   line-height: 1.5;
+  margin-top: 2px;
 }
 
 .sub{
@@ -35,6 +36,7 @@ h1 {
 h3{
   font-size: 34px;
   text-align: left;
+  margin-bottom: 0px;
 }
 
 body::-webkit-scrollbar {

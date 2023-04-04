@@ -38,21 +38,29 @@
                     <li><b>backlink</b> as a link that is pointing towards any page <i>u</i>. <br> </li>
                     <li><b>fowardlink</b> as a link that is pointing out of <i>u</i> into another page <i>w</i>. </li>
                 </ul>
+            <p>Given The Algorithm:</p>
+            <br>
+                    <img src="../static/equation.jpg" width="200" height="100">
+            <br>
+            <p>We can define:</p>
+                <ul>
+                    <li><b>B<span class="sub">u</span></b> as the set of all pages that cite our webpage <b>u</b>, that is, a set of all pages with fowardlinks to u </li>
+                    <li><b>v</b> as an element of the set <b>B<span class="sub">u</span></b> </li>
+                    <li><b>N<span class="sub">v</span></b> is the total number of fowardlinks that are in <b>v</b></li>
+                </ul>
             <p>
-                Given The Algorithm:
-                <br>
-                        <img src="../static/equation.jpg" width="200" height="100">
-                <br>
-                The PageRank algorithm is an recursive algorithm that calculates the PageRank of a site from the set of backlinks, <i>v</i>, that point to that page. 
+                The PageRank algorithm is an recursive algorithm that calculates the PageRank of a site 'u' from the set of pages, <b>B<span class="sub">u</span></b>, that point to 'u'. 
                 These backlinks are weighted based on the PageRank of the site that contains it, <i>R(v)</i>, divided by the number of forward links in that page. 
                 If the backlink comes from a particularly important site (with high PageRank), it will be weighted higher. 
                 The PageRank of a page is the sum of the PageRank of the backlinks. It is then mulitplied by <i>c</i> to make sure it adds up to 1. 
                 PageRank can be thought of intuitively with the random surfer model: it models the chances that a surfer would click on a link if they were randomly selecting links to click on. 
                 If a page has a PageRank of .4, then there is a 40% chance a web surfer will click on the page. We need <i>c</i> because we don't want the total PageRank exceeding 100%. To help you visualize the algorithm, we have the diagram below.
                 <br>
-                    <img src="../static/diagram.jpg" width="350" height="250">
-
-
+                    <img src="../static/diagram.jpg" width="350" height="250"> <span> (From <a href="https://www.semanticscholar.org/paper/The-PageRank-Citation-Ranking-%3A-Bringing-Order-to-Page-Brin/eb82d3035849cd23578096462ba419b53198a556">here</a> )</span>
+            </p>
+            <p>
+                After distributing the pageranks of each site like this, the process is repeated until the 
+                sites' pageranks converge into a certain value, at which point, any further calculations will result in minimal change
             </p>
         </div>
 
@@ -77,7 +85,10 @@
             <h3>Conclusion</h3>
 
             <p>
-                this is the very first paragraph of our very cool website
+                The PageRank algorithm, as a recursive weighting algorithm, is useful for determining the relevance of 
+                a certain site by looking at the amount of ciations and the quality of the citations pointing to that site. This model is good
+                because it reduces the possiblity of someone manipulating a certain site's pagerank by adding citations pointing to it. 
+                The amount of pagerank distributed from a certain link is dependent on the pagerank of the initial site.
             </p>
         </div>
     </div>
